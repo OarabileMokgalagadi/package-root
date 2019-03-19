@@ -6,7 +6,6 @@ def sum_array(array):
         return sum_array(array[1:]) + array[0]
 
 
-
 def fibonacci(n):
     """Calculate nth term in fibonacci sequence"""
     if n <= 1:
@@ -15,17 +14,14 @@ def fibonacci(n):
         return fibonacci(n - 1) + fibonacci(n - 2)
 
 def factorial(n):
-
     """ returns n! """
-
     if n <1:   # base case
         return 1
     else:
         return n * factorial( n - 1 )
 
 def reverse(word):
-     """ Return word in reverse"""
-
+    """ Return word in reverse"""
     wordlen = len(word)
     reversedword = ""
     for i in range(wordlen-1,-1,-1):
