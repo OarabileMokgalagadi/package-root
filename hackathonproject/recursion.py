@@ -1,4 +1,4 @@
-def sum_array(array):
+def sum_array(array)
     """calculate sum of all items in array"""
     if len(array) == 0:
         return 0
