@@ -46,6 +46,6 @@ def quick_sort(items):
     if not items:
         return []
     pivots = [x for x in items if x == items[0]]
-    lesser = quicksort([x for x in items if x < items[0]])
-    greater = quicksort([x for x in items if x > items[0]])
+    lesser = quick_sort([x for x in items if x < items[0]])
+    greater = quick_sort([x for x in items if x > items[0]])
     return lesser + pivots + greater
