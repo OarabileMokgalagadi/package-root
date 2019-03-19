@@ -41,17 +41,11 @@ def merge(left, right):
     return result
 
 
-
-  def quick_sort(items):
-
-      """
-      Return array of items, sorted in ascending order
-
-      """
-      if not items:
-          return []
-
-      pivots = [x for x in items if x == items[0]]
-      lesser = quicksort([x for x in items if x < items[0]])
-      greater = quicksort([x for x in items if x > items[0]])
-      return lesser + pivots + greater
+def quick_sort(items):
+    """Return array of items, sorted in ascending order"""
+    if not items:
+        return []
+    pivots = [x for x in items if x == items[0]]
+    lesser = quicksort([x for x in items if x < items[0]])
+    greater = quicksort([x for x in items if x > items[0]])
+    return lesser + pivots + greater
