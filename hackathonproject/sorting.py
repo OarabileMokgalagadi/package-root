@@ -1,19 +1,6 @@
 def bubble_sort(items):
-    """
-    Return array of items, sorted in ascending order
-    Args :
-    items(array):list or array-like object containing numerical values
-
-    returns:
-    Return array of items, sorted in ascending order
-
-    Examples:
-    >>>bubble_sort([3,9,6,8,12,8])
-       [3, 6, 8, 8, 9, 12]
-    >>>bubble_sort([1,9,6,3])
-       [1, 3, 6, 9]
-    """
-for i in range(len(items)):
+    """Return array of items, sorted in ascending order"""
+    for i in range(len(items)):
         for j in range(i, len(items)):
             if items[i] > items[j]:
                 items[i], items[j] = items[j], items[i]
@@ -25,17 +12,6 @@ def merge_sort(items):
     """
      Return array of items, sorted in ascending order
 
-     Args :
-     items(array):list or array-like object containing numerical values
-
-     returns:
-     Return array of items, sorted in ascending order
-
-     Examples:
-     >>>merge_sort([5, 2, 6, 8, 5, 8, 1])
-        [1, 2, 5, 5, 6, 8, 8]
-    >>>merge_sort([3, 12,46, 99, 5, 8, 1])
-       [1, 3, 5, 8, 12, 46, 99]
     """
 
     if len(items) < 2:
@@ -66,31 +42,16 @@ def merge(left, right):
 
 
 
-  def quicksort(items):
+  def quick_sort(items):
 
       """
       Return array of items, sorted in ascending order
 
-      Args :
-      items(array):list or array-like object containing numerical values
-
-      returns:
-      Return array of items, sorted in ascending order
-
-      Examples:
-      >>>quicksort([4,20,3,15,2,27,16])
-      [2, 3, 4, 15, 16, 20, 27]
-      >>>quicksort([14,2,36,1,2,7,6])
-      [1, 2, 2, 6, 7, 14, 36]
-
-
       """
-
       if not items:
-        return []
+          return []
 
-    pivots = [x for x in items if x == items[0]]
-    lesser = quicksort([x for x in items if x < items[0]])
-    greater = quicksort([x for x in items if x > items[0]])
-
-    return lesser + pivots + greater
+      pivots = [x for x in items if x == items[0]]
+      lesser = quicksort([x for x in items if x < items[0]])
+      greater = quicksort([x for x in items if x > items[0]])
+      return lesser + pivots + greater
